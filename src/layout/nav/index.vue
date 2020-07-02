@@ -1,7 +1,13 @@
 <template>
   <div class="container">
     <div class="direction_container">
-      <svg-icon icon-class="direction"></svg-icon>
+      <svg-icon icon-class="direction" style="margin-right:16px"/>
+      <el-breadcrumb separator-class="el-icon-arrow-right">
+        <el-breadcrumb-item :to="{path:'/'}">{{$t('menu.home')}}</el-breadcrumb-item>
+        <template v-if="this.$route.path != '/'">
+          <el-breadcrumb-item v-for="route in routeList" :key="route" :to="{path:route.path}">{{$t('menu.'+route.name)}}</el-breadcrumb-item>
+        </template>
+      </el-breadcrumb>
     </div>
     <div class="function_container">
       <div>
@@ -33,7 +39,15 @@ export default {
   name: 'Nav',
   data () {
     return {
-      navDropInfo: navDropInfo
+      navDropInfo: navDropInfo,
+      route: this.$route,
+      routeList: []
+    }
+  },
+  watch: {
+    $route (to, from) {
+      this.routeList = this.$route.matched
+      console.log(this.routeList)
     }
   },
   methods: {
@@ -52,7 +66,11 @@ export default {
     border-top:none;
     box-shadow: 0 2px 2px #e0e0e0;
     .direction_container{
-      margin-left:12px
+      margin-left:12px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: #e0e0e0;
     }
     .function_container{
       div {

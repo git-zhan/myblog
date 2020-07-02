@@ -5,9 +5,13 @@ const Sys = {
     'security': 'Security',
     'userManage': 'UserManage',
     'usergroupManage': 'UsergroupManage',
+    'authority': 'Authority',
     'parameter': 'ParamSetting',
     'sysParam': 'SystemParam',
-    'userParam': 'UserParam'
+    'userParam': 'UserParam',
+    'blog': 'BlogManage',
+    'blogList': 'BlogList',
+    'blogPublish': 'PublishBlog'
   }
 }
 

@@ -18,7 +18,7 @@ export default new Router({
       ]
     },
     {
-      path: '/security',
+      path: '/security/user',
       name: 'security',
       component: Layout,
       children: [
@@ -31,11 +31,16 @@ export default new Router({
           path: '/security/usergroup',
           name: 'usergroupManage',
           component: () => import('@/views/security/usergroup')
+        },
+        {
+          path: '/security/authority',
+          name: 'authority',
+          component: () => import('@/views/security/authority')
         }
       ]
     },
     {
-      path: '/param',
+      path: '/param/sys',
       name: 'parameter',
       component: Layout,
       children: [
@@ -52,7 +57,7 @@ export default new Router({
       ]
     },
     {
-      path: '/history',
+      path: '/history/log/visit',
       name: 'history',
       component: Layout,
       children: [
@@ -65,6 +70,23 @@ export default new Router({
           path: '/history/user',
           name: 'userHistory',
           component: () => import('@/views/history/user')
+        }
+      ]
+    },
+    {
+      path: '/blog/list',
+      name: 'blog',
+      component: Layout,
+      children: [
+        {
+          path: '/blog/list',
+          name: 'blogList',
+          component: () => import('@/views/blog/list')
+        },
+        {
+          path: '/blog/publish',
+          name: 'blogPublish',
+          component: () => import('@/views/blog/publish')
         }
       ]
     }
