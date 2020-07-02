@@ -4,7 +4,10 @@ const Sys = {
     'basicSetting': 'BasicSetting',
     'security': 'Security',
     'userManage': 'UserManage',
-    'usergroupManage': 'UsergroupManage'
+    'usergroupManage': 'UsergroupManage',
+    'parameter': 'ParamSetting',
+    'sysParam': 'SystemParam',
+    'userParam': 'UserParam'
   }
 }
 

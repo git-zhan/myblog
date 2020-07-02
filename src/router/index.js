@@ -33,7 +33,25 @@ export default new Router({
           component: () => import('@/views/security/usergroup')
         }
       ]
-    }, {
+    },
+    {
+      path: '/param',
+      name: 'parameter',
+      component: Layout,
+      children: [
+        {
+          path: '/param/sys',
+          name: 'sysParam',
+          component: () => import('@/views/param/sys')
+        },
+        {
+          path: '/param/user',
+          name: 'userParam',
+          component: () => import('@/views/param/user')
+        }
+      ]
+    },
+    {
       path: '/history',
       name: 'history',
       component: Layout,
