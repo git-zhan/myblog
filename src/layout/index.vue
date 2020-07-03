@@ -5,8 +5,9 @@
         <menu-aside></menu-aside>
       </el-aside>
       <el-container>
-        <el-header style="padding:0;height:48px;border-top:none">
+        <el-header style="padding:0;height:60px;border-top:none">
           <nav-header></nav-header>
+          <!-- <nav-tabs></nav-tabs> -->
         </el-header>
         <el-main>
           <router-view></router-view>

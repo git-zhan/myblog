@@ -4,7 +4,8 @@
              :default-active="defaultActive"
              active-text-color="#ffd04b"
              background-color="#545c64"
-             text-color="#fff">
+             text-color="#fff"
+             unique-opened>
       <div v-for="route in routes" :key="route.path">
         <template v-if='isHasOneChild(route)'>
           <el-menu-item :index="route.path">{{$t(menu + route.children[0].name)}}</el-menu-item>
