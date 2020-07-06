@@ -18,7 +18,7 @@ export default new Router({
       ]
     },
     {
-      path: '/security/user',
+      path: '/security',
       name: 'security',
       component: Layout,
       children: [
@@ -40,7 +40,7 @@ export default new Router({
       ]
     },
     {
-      path: '/param/sys',
+      path: '/param',
       name: 'parameter',
       component: Layout,
       children: [
@@ -57,7 +57,7 @@ export default new Router({
       ]
     },
     {
-      path: '/history/log/visit',
+      path: '/history',
       name: 'history',
       component: Layout,
       children: [
@@ -74,7 +74,7 @@ export default new Router({
       ]
     },
     {
-      path: '/blog/list',
+      path: '/blog',
       name: 'blog',
       component: Layout,
       children: [

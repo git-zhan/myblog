@@ -1,8 +1,12 @@
 <template>
   <div class="container">
-    <el-tag v-for="tag in tags" :key="tag.name" closable hit size="medium" @click.native="tagHandle('click',tag)" @close="tagHandle('close',tag)">
-      {{$t('menu.'+tag.name)}}
-    </el-tag>
+    <div v-for="tag in tags" :key="tag.name" >
+      <span class="tag_container">
+        <router-link :to="{name:'home'}">
+          {{$t('menu.'+tag.name)}}
+        </router-link>
+      </span>
+    </div>
   </div>
 </template>
 <script>
@@ -12,6 +16,14 @@ export default {
     return {
       tags: []
     }
+  },
+  mounted () {
+    this.$nextTick(() => {
+      if (this.tags.length === 0) {
+        let home = this.$router.options.routes[0].children[0]
+        this.tags.push(home)
+      }
+    })
   },
   watch: {
     $route (to, from) {
@@ -27,13 +39,27 @@ export default {
   },
   methods: {
     tagHandle (type, tag) {
-      if (type === 'close') {
-        this.tags.splice(this.tags.indexOf(tag), 1)
+      if (type === 'CLICK') {
+        console.log(type)
+        this.$router.push({name: 'home'})
       } else {
-        console.log(1)
-        this.$router.push({path: '/'})
+        console.log(type)
       }
     }
   }
 }
 </script>
+<style lang="scss" scoped>
+  .container{
+    border-bottom:solid 1px #e0e0e0;
+    height:24px;
+    box-shadow: 0px 2px 3px #e0e0e0;
+    display: flex;
+    .tag_container{
+      color:black;
+      text-align: center;
+      margin-left: 12px;
+      font-size:12px
+    }
+  }
+</style>

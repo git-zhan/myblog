@@ -30,13 +30,12 @@ export default {
   data () {
     return {
       menu: 'menu.',
-      defaultActive: '/',
       routes: this.$router.options.routes
     }
   },
-  watch: {
-    $route (to, from) {
-      this.defaultActive = to.path
+  computed: {
+    defaultActive: function () {
+      return this.$route.path
     }
   },
   methods: {

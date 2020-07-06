@@ -34,9 +34,7 @@
         </div>
       </div>
     </div>
-    <div class="tabs_container">
-      <nav-tabs></nav-tabs>
-    </div>
+    <nav-tabs></nav-tabs>
   </div>
 </template>
 <script>
@@ -73,8 +71,9 @@ export default {
     align-items: center;
     border:solid 1px #e0e0e0;
     border-top:none;
-    box-shadow: 0 2px 2px #e0e0e0;
+    box-shadow: 0 2px 2px #F2F6FC;
     height:48px;
+    margin: 4px 0;
     .direction_container{
       margin-left:12px;
       display: flex;
