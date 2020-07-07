@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    user
+    <router-link :to="{path:'/'}">Home</router-link>
   </div>
 </template>
 <script>

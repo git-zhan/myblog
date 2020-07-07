@@ -6,8 +6,7 @@
       </el-aside>
       <el-container>
         <el-header style="padding:0;border-top:none">
-          <nav-header></nav-header>
-          <!-- <nav-tabs></nav-tabs> -->
+          <nav-header/>
         </el-header>
         <el-main>
           <router-view></router-view>
@@ -31,10 +30,7 @@ export default {
 }
 </script>
 <style scoped>
-  .container {
-    height: 100%;
-  }
-  .el-container {
+  .container, .el-container{
     height: 100%;
   }
 </style>

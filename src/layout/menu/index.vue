@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <el-menu router
-             :default-active="defaultActive"
+             :default-active="this.$route.path"
              active-text-color="#ffd04b"
              background-color="#545c64"
              text-color="#fff"
@@ -31,11 +31,6 @@ export default {
     return {
       menu: 'menu.',
       routes: this.$router.options.routes
-    }
-  },
-  computed: {
-    defaultActive: function () {
-      return this.$route.path
     }
   },
   methods: {

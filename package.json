@@ -20,6 +20,7 @@
     "vue-i18n": "8.17.7"
   },
   "devDependencies": {
+    "mavon-editor":"2.5.3",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",
