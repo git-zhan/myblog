@@ -6,6 +6,11 @@
 <script>
 export default {
   name: 'BlogPublish',
+  watch: {
+    value: function (old, newValue) {
+      console.log(old)
+    }
+  },
   data () {
     return {
       value: ''

@@ -24,6 +24,7 @@ export default {
 </script>
 <style lang="scss" scoped>
   .container {
+    margin:17px 0px;
     .breadcrumb_text{
       font-weight: normal;
     }

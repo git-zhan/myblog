@@ -1,13 +1,15 @@
 <template>
   <div class="container">
-    <div class="translate">
-      <svg-icon icon-class="translate"/>
+    <div class="function_item_container">
+      <svg-icon icon-class="translate" class="svg_item"/>
     </div>
-    <div class="acvator">
-      <svg-icon icon-class="acvator"/>
+    <div class="function_item_container">
+      <svg-icon icon-class="acvator" class="svg_item"/>
     </div>
-    <div class="authority_text">
+    <div class="function_item_container">
       <span>admin</span>
+    </div>
+    <div class="function_item_container">
       <el-dropdown @command="commandHandle()">
         <i class="el-icon-arrow-down"></i>
         <el-dropdown-menu slot="dropdown">
@@ -17,9 +19,15 @@
         </el-dropdown-menu>
       </el-dropdown>
     </div>
-    <div class="drop_menu">
+    <!-- <div class="translate">
 
     </div>
+    <div class="acvator">
+
+    </div>
+    <div class="authority_text">
+
+    </div> -->
   </div>
 </template>
 <script>
@@ -37,15 +45,15 @@ export default {
   .container {
     display: flex;
     align-items: center;
-    justify-content: right;
-    margin-left: 40px;
-    div{
-      margin-left:20px;
+    justify-content: flex-end;
+    .function_item_container{
+      height:100%;
       cursor: pointer;
-    }
-    .authority_text{
-      display: flex;
-      align-items: center;
+      margin-left:12px;
+      padding:14px 0px;
+      &:last-child{
+        margin-right:12px
+      }
     }
   }
 </style>
